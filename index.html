@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Frontend Mentor | Bento grid</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/11c320e494.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#F5F5F5]">
+    <main
+      class="mx-40 my-16 grid grid-rows-[repeat(20,_minmax(0,_1fr))] grid-cols-4 gap-4 min-h-[140vh] *:rounded-md *:shadow-md *:p-6 cursor-default"
+    >
+      <div
+        class="row-span-10 bg-[#FAEEE2] hover:scale-105 transition duration-300"
+        id="card1"
+      >
+        <h2 class="text-3xl font-medium mt-6">
+          Create and schedule content
+          <span class="text-[#7651DC] italic">quicker.</span>
+        </h2>
+        <div class="relative">
+          <button
+            class="flex mt-4 items-center gap-2 bg-[#FFCC69] py-3 px-6 rounded-full mx-auto font-semibold text-[#7651DC]"
+            id="create-post-btn"
+          >
+            Create Post
+            <img
+              src="assets\images\star.png"
+              stars-anim
+              alt=""
+              class="h-6 w-6"
+            />
+          </button>
+          <img
+            src="assets\images\mouse.png"
+            alt=""
+            id="mouse"
+            class="absolute h-8 w-8 mt-1 left-1/2 -translate-y-1/2"
+          />
+        </div>
+      </div>
+      <div
+        class="col-span-2 row-span-8 bg-[#7651DC] flex flex-col items-center hover:scale-105 transition duration-300"
+        id="card2"
+      >
+        <h2 class="text-5xl font-medium text-white text-center mt-6">
+          Social Media
+          <span class="text-[#FFCC69]"><span number-spin="10">10</span>x</span>
+          <span class="italic">Faster</span> with AI
+        </h2>
+        <div class="flex gap-2 mt-6">
+          <i class="fa-solid fa-star text-[#FFCC69] relative stars"></i>
+          <i class="fa-solid fa-star text-[#FFCC69] relative stars"></i>
+          <i class="fa-solid fa-star text-[#FFCC69] relative stars"></i>
+          <i class="fa-solid fa-star text-[#FFCC69] relative stars"></i>
+          <i class="fa-solid fa-star text-[#FFCC69] relative stars"></i>
+        </div>
+        <p class="text-[#DCD1FC] mt-2">Over 4,000 5-star reviews</p>
+      </div>
+      <div
+        class="[grid-row:span_14/span_14] bg-[#DCD1FC] hover:scale-105 transition duration-300 relative overflow-hidden flex flex-col gap-4"
+        id="card3"
+      >
+        <h2 class="text-2xl font-medium">Schedule to social media.</h2>
+        <div class="h-80">
+          <img
+            src="assets/images/illustration-schedule-posts.png"
+            alt=""
+            class="absolute h-80 w-full"
+          />
+          <div
+            class="absolute ml-4 w-[90%] grid grid-cols-5 gap-4 bottom-[38%] items-end"
+          >
+            <div class="h-20 bg-purple-500 rounded-full" stats-elm="46"></div>
+            <div class="h-20 bg-purple-500 rounded-full" stats-elm="70"></div>
+            <div class="h-20 bg-purple-500 rounded-full" stats-elm="100"></div>
+            <div class="h-20 bg-purple-500 rounded-full" stats-elm="86"></div>
+            <div class="h-20 bg-purple-500 rounded-full" stats-elm="76"></div>
+          </div>
+        </div>
+        <p>
+          Optimize post timings to publish content at the perfect time for your
+          audience.
+        </p>
+      </div>
+      <div
+        class="row-span-6 bg-white hover:scale-105 transition duration-300 overflow-hidden relative"
+        id="card4"
+      >
+        <img
+          src="assets/images/illustration-multiple-platforms.webp"
+          class="absolute"
+          accounts-anim
+          alt=""
+        />
+
+        <h2 class="text-2xl font-medium mt-20">
+          Manage multiple accounts and platforms.
+        </h2>
+      </div>
+      <div
+        class="row-span-6 bg-[#FFCC69] hover:scale-105 transition duration-300 overflow-hidden relative"
+        id="card5"
+      >
+        <h2 class="text-2xl font-medium">
+          Maintain a consistent posting schedule.
+        </h2>
+        <div class="flex gap-8 items-center mt-24 ml-3.5 absolute z-10">
+          <i class="fa-solid fa-circle-check text-[#7651DC] circle-check"></i>
+          <i class="fa-solid fa-circle-check text-[#7651DC] circle-check"></i>
+          <i class="fa-solid fa-circle-check text-[#7651DC] circle-check"></i>
+          <i class="fa-solid fa-circle-check text-[#7651DC] circle-check"></i>
+        </div>
+        <img
+          src="assets\images\illustration-consistent-schedule.png"
+          class="absolute w-[80%] bottom-0"
+          alt=""
+        />
+      </div>
+      <div
+        class="row-span-10 bg-[#FFCC69] hover:scale-105 duration-300 flex flex-col flex-1 justify-between"
+        id="card6"
+      >
+        <h2 class="text-3xl font-medium">Write your content using AI.</h2>
+        <div class="relative">
+          <img src="assets\images\illustration-ai-content.png" alt="" />
+
+          <div
+            class="absolute right-[11%] flex justify-center items-center w-8 h-8 top-[32%] bg-[#FFCC69] rounded-full"
+          >
+            <i class="fa-solid fa-arrow-up text-[#7651DC]" arrow-up-anim></i>
+          </div>
+
+          <div
+            class="absolute left-[6%] flex justify-center items-center w-8 h-8 top-[48%] bg-[#DCD1FC] rounded-full"
+          >
+            <img
+              src="assets\images\star.png"
+              stars-anim
+              alt=""
+              class="h-3 w-3"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="row-span-6 bg-white hover:scale-105 duration-300 flex flex-1 flex-col justify-between"
+        id="card7"
+      >
+        <div>
+          <h2 class="text-4xl font-medium">
+            ><span number-spin="56">56</span>%
+          </h2>
+          <p class="mt-2" id="audience-text">faster audience growth</p>
+        </div>
+        <img src="assets/images/illustration-audience-growth.webp" alt="" />
+      </div>
+      <div
+        class="col-span-2 row-span-6 bg-[#7651DC] hover:scale-105 duration-300 flex items-center gap-2"
+        id="card8"
+      >
+        <div class="relative h-48 w-full">
+          <p
+            class="font-medium text-lg absolute mt-10 ml-6"
+            number-spin="20642"
+          >
+            20,642
+          </p>
+          <img
+            src="assets/images/illustration-grow-followers.png"
+            class="h-full w-full"
+            alt=""
+          />
+          <div
+            class="absolute flex justify-center items-center w-8 h-8 left-14 bg-[#FFCC69] rounded-full mb-4 bottom-0"
+          >
+            <i class="fa-solid fa-arrow-up text-[#7651DC]" arrow-up-anim></i>
+          </div>
+          <p
+            class="font-medium text-lg absolute bottom-0 right-0 mr-14 mb-2"
+            number-spin="89532"
+          >
+            89,532
+          </p>
+        </div>
+
+        <h2 class="text-3xl text-white font-medium">
+          Grow followers with non-stop content.
+        </h2>
+      </div>
+    </main>
+  </body>
+  <script src="assets/scripts/card1-anim.js"></script>
+  <script src="assets/scripts/card2-anim.js"></script>
+  <script src="assets/scripts/card3-anim.js"></script>
+  <script src="assets/scripts/card4-anim.js"></script>
+  <script src="assets/scripts/card5-anim.js"></script>
+  <script src="assets/scripts/card7-anim.js"></script>
+  <script src="assets/scripts/utils.js"></script>
+</html>
