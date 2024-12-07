@@ -36,9 +36,3 @@ createBtn.addEventListener("mouseleave", () => {
 // createBlock.addEventListener("mouseleave", () => {
 //   mouseTimeline.pause();
 // });
-
-gsap.to("rect", {
-  strokeDasharray: "600 0",
-  duration: 2,
-  ease: "power1.inOut",
-});

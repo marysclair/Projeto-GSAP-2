@@ -4,7 +4,6 @@ gsap.fromTo(
   accounts,
   {
     marginLeft: 0,
-    duration: 1,
   },
-  { marginLeft: -24, duration: 2, repeat: -1, yoyo: true }
+  { marginLeft: -24, duration: 2, repeat: -1, yoyo: true, duration: 1 }
 );
