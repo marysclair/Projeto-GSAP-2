@@ -5,5 +5,5 @@ gsap.fromTo(
   {
     marginLeft: 0,
   },
-  { marginLeft: -24, duration: 2, repeat: -1, yoyo: true, duration: 1 }
+  { marginLeft: -24, repeat: -1, yoyo: true, duration: 1 }
 );
